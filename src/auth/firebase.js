@@ -90,6 +90,7 @@ export const userObserver = (setCurrentUser) => {
 
 export const logOut = () => {
   signOut(auth);
+  toastSuccessNotify('Logged out successfully!');
 };
 
 //* https://console.firebase.google.com/
@@ -105,7 +106,7 @@ export const signUpProvider = (navigate) => {
     .then((result) => {
       console.log(result);
       navigate('/');
-      toastSuccessNotify('Logged out successfully!');
+      toastSuccessNotify('Logged in successfully!');
     })
     .catch((error) => {
       // Handle Errors here.
